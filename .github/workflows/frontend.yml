@@ -38,11 +38,12 @@ jobs:
           tags: |
             mateuszpolewski/zadanie2_podpunkt1_2:v1
 
-    multistage-build:
-      name: 
-      runs-on: ubuntu-latest
+  multistage-build:
+    name: Wieloetapowa budowa obrazów i publikacja
+    runs-on: ubuntu-latest
 
-      steps:
+    steps:
+
       - name: Checkout code
         uses: actions/checkout@v2
       
@@ -66,11 +67,12 @@ jobs:
           tags: |
             mateuszpolewski/zadanie2_podpunkt3:v1
 
-    cache:
-      name: 
-      runs-on: ubuntu-latest
+  cache:
+    name: Budowa obrazow z wykorzystaniem pamieci cache
+    runs-on: ubuntu-latest
 
-      steps:
+    steps:
+
       - name: Checkout code
         uses: actions/checkout@v2
       
@@ -101,4 +103,3 @@ jobs:
           push: true
           tags: |
             mateuszpolewski/zadanie2_podpunkt4:v1
-      
